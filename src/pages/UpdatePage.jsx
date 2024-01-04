@@ -33,7 +33,7 @@ const UpdatePage = () => {
         if (data) {
             setFormError(null)
             console.log(data)
-            navigate('/')
+            navigate('/snippets')
         }
 
     }
