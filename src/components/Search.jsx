@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
+import AOS from 'aos'
+import "aos/dist/aos.css"
 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState('')
@@ -10,10 +12,14 @@ const Search = () => {
         navigate(`/search?q=${searchTerm}`)
     }
 
+    useEffect(() => {
+        AOS.init()
+    }, []);
+
     return (
         <div className='container mx-auto'>
             <form onSubmit={handleSubmit} className="max-w-xl flex flex-col mx-auto">
-                <div className="mt-10">
+                <div data-aos="fade-down" className="mt-10">
                     <label htmlFor="search"
                            className="mb-4 font-medium text-gray-900 dark:text-white text-center hidden">Search For a
                         Code Snippets</label>
