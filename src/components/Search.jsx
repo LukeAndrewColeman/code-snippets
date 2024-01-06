@@ -10,10 +10,6 @@ const Search = () => {
         navigate(`/search?q=${searchTerm}`)
     }
 
-    useEffect(() => {
-        AOS.init()
-    }, []);
-
     return (
         <div className='container mx-auto'>
             <form onSubmit={handleSubmit} className="max-w-xl flex flex-col mx-auto">
