@@ -174,8 +174,8 @@ const HomePage = () => {
 
     return (
         <div className="container mx-auto">
-            {userLoggedIn && <Search/>}
-            {userLoggedIn && <div className="mt-12 container mx-auto">
+            <Search/>
+            <div className="mt-12 container mx-auto">
                 <button data-aos="fade-right" data-aos-delay="300" onClick={handleAll} className="bg-indigo-700 px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">All</button>
                 <button data-aos="fade-right" data-aos-delay="400" onClick={handleWpBakery} className="bg-[#3F447B] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">WP Bakery</button>
                 <button data-aos="fade-right" data-aos-delay="500" onClick={handleWordpress} className="bg-[#3759E9] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">WordPress</button>
@@ -183,14 +183,14 @@ const HomePage = () => {
                 <button data-aos="fade-right" data-aos-delay="700" onClick={handlePHP} className="bg-[#7A86B8] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">PHP</button>
                 <button data-aos="fade-right" data-aos-delay="800" onClick={handleCSS} className="bg-[#2377B9] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">CSS</button>
                 <button data-aos="fade-right" data-aos-delay="900"onClick={handleHTML} className="bg-[#F26C33] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">HTML</button>
-            </div>}
+            </div>
 
-            {userLoggedIn && <div className="justify-center grid grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto mt-20">
+            <div className="justify-center grid grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto mt-20">
                     {fetchError && (<p>{fetchError}</p>)}
                     {snippets && snippets.map(snippet => (
                         <SnippetCard key={snippet.id} snippet={snippet}/>
                     ))}
-                </div>}
+                </div>
 
             {!userLoggedIn && <h3 className="text-xl font-bold">Please login to see code snippets</h3>}
         </div>
