@@ -141,6 +141,7 @@ const HomePage = () => {
             const {data, error} = await supabase
                 .from('snippets')
                 .select()
+                .order('id', { ascending: false })
 
             if (error) {
                 setFetchError('Could not fetch snippets')

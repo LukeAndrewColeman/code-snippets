@@ -51,7 +51,7 @@ const SnippetPage = () => {
                 .from('snippets')
                 .select()
                 .eq('id', id)
-                .single();
+                .single()
 
             if (error) {
                 navigate('/', { replace: true });
