@@ -12,7 +12,7 @@ const Search = () => {
 
     return (
         <div className='container mx-auto'>
-            <form onSubmit={handleSubmit} className="max-w-xl flex flex-col mx-auto">
+            <form onSubmit={handleSubmit} className="w-3/4 lg:w-1/2 flex flex-col mx-auto">
                 <div className="mt-10">
                     <label htmlFor="search"
                            className="mb-4 font-medium text-gray-900 dark:text-white text-center hidden">Search For a

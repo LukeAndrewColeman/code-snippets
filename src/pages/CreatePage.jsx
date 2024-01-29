@@ -43,7 +43,7 @@ const CreatePage = () => {
         <div className="container mx-auto mt-6">
             <h1 className="text-center text-2xl text-indigo-500 font-bold">Create a New Code Snippet</h1>
             <form onSubmit={handleSubmit} className="flex flex-col items-center mt-6 bg-[#1E1E1E]] p-10 rounded-xl">
-                <div className="flex flex-col w-[800px]">
+                <div className="flex flex-col w-[80%]">
                     <label htmlFor="title" className="mb-2 font-bold text-gray-900 dark:text-white text-center">Title</label>
                     <input type="text" id="title" name="title"
                            className="bg-[#2C2C2C]  text-gray-400 rounded-lg block w-full p-2.5 "
@@ -52,7 +52,7 @@ const CreatePage = () => {
                            onChange={(e) => setTitle(e.target.value)}
                     />
                 </div>
-                <div className="flex flex-col w-[800px] mt-6">
+                <div className="flex flex-col w-[80%] mt-6">
                     <label htmlFor="description" className="mb-2 font-bold text-gray-900 dark:text-white text-center">Description</label>
                     <input type="text" id="description" name="description"
                            className="bg-[#2C2C2C] text-gray-400 rounded-lg block w-full p-2.5 "
@@ -61,7 +61,7 @@ const CreatePage = () => {
                            onChange={(e) => setDescription(e.target.value)}
                     />
                 </div>
-                <div className="flex flex-col w-[800px] mt-6">
+                <div className="flex flex-col w-[80%] mt-6">
                     <label htmlFor="language"
                            className="mb-2 font-bold text-gray-900 dark:text-white text-center">Tag</label>
                     <select name="language" id="language"  className="bg-[#2C2C2C] text-gray-400 rounded-lg block w-full p-2.5"
@@ -77,14 +77,8 @@ const CreatePage = () => {
                         <option value="CSS">CSS</option>
                         <option value="HTML">HTML</option>
                     </select>
-                    {/*<input type="text" id="language" name="language"*/}
-                    {/*       className="bg-[#2C2C2C]  text-gray-400 rounded-lg block w-full p-2.5 "*/}
-                    {/*       required*/}
-                    {/*       value={language}*/}
-                    {/*       onChange={(e) => setLanguage(e.target.value)}*/}
-                    {/*/>*/}
                 </div>
-                <div className="flex flex-col w-[800px] mt-6">
+                <div className="flex flex-col w-[80%] mt-6">
                     <label htmlFor="codeSnippet" className="mb-4 font-bold text-gray-900 dark:text-white text-center">Code
                         Snippet</label>
                     <textarea id="codeSnippet" name="codeSnippet" rows="15" cols="33"

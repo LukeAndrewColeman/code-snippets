@@ -34,7 +34,7 @@ const LoginPage = () => {
             <div className="container mx-auto mt-6">
                 <h1 className="text-center text-2xl text-indigo-500 font-bold">Please Log in Below</h1>
                 <form onSubmit={handleSubmit} className="flex flex-col items-center mt-6 bg-[#1E1E1E]] p-10 rounded-xl">
-                    <div className="flex flex-col w-[800px]">
+                    <div className="flex flex-col w-[80%]">
                         <label htmlFor="email"
                                className="mb-2 font-bold text-gray-900 dark:text-white text-center">Email</label>
                         <input type="email" id="email" name="email"
@@ -44,7 +44,7 @@ const LoginPage = () => {
                                onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
-                    <div className="flex flex-col w-[800px] mt-6">
+                    <div className="flex flex-col w-[80%] mt-6">
                         <label htmlFor="password"
                                className="mb-2 font-bold text-gray-900 dark:text-white text-center">Password</label>
                         <input type="password" id="password" name="password"
