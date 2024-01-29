@@ -23,6 +23,7 @@ const SnippetCard = ({snippet}) => {
     const languageColors = {
         WordPress: 'bg-[#3759E9]',
         JavaScript: 'bg-[#468A44]',
+        SQL: 'bg-[#028090]',
         PHP: 'bg-[#7A86B8]',
         CSS: 'bg-[#2377B9]',
         HTML: 'bg-[#F26C33]',

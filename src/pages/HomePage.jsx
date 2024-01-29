@@ -82,6 +82,24 @@ const HomePage = () => {
         }
     }
 
+    const handleSQL = async () => {
+        const {data, error} = await supabase
+            .from('snippets')
+            .select()
+            .eq('language', 'SQL')
+
+        if (error) {
+            setFetchError('Could not fetch snippets')
+            setSnippets(null)
+            console.log(error)
+        }
+
+        if (data) {
+            setSnippets(data)
+            setFetchError(null)
+        }
+    }
+
     const handlePHP = async () => {
         const {data, error} = await supabase
             .from('snippets')
@@ -181,9 +199,10 @@ const HomePage = () => {
                 <button data-aos="fade-right" data-aos-delay="400" onClick={handleWpBakery} className="bg-[#3F447B] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">WP Bakery</button>
                 <button data-aos="fade-right" data-aos-delay="500" onClick={handleWordpress} className="bg-[#3759E9] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">WordPress</button>
                 <button data-aos="fade-right" data-aos-delay="600" onClick={handleJavascript} className="bg-[#468A44] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">JavaScript</button>
+                <button data-aos="fade-right" data-aos-delay="600" onClick={handleSQL} className="bg-[#028090] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">SQL</button>
                 <button data-aos="fade-right" data-aos-delay="700" onClick={handlePHP} className="bg-[#7A86B8] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">PHP</button>
                 <button data-aos="fade-right" data-aos-delay="800" onClick={handleCSS} className="bg-[#2377B9] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">CSS</button>
-                <button data-aos="fade-right" data-aos-delay="900"onClick={handleHTML} className="bg-[#F26C33] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">HTML</button>
+                <button data-aos="fade-right" data-aos-delay="900" onClick={handleHTML} className="bg-[#F26C33] px-3 py-1 rounded text-sm mr-2 mt-4 font-bold">HTML</button>
             </div>
 
             <div className="justify-center grid grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto mt-20">

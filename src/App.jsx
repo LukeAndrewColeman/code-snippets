@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage.jsx";
 import UpdatePage from "./pages/UpdatePage.jsx";
 import SnippetPage from "./pages/SnippetPage.jsx";
 import SearchPage from "./pages/SearchPage.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
                   <Route path="/snippet/:id" element={<SnippetPage />}/>
                   <Route path="/:id" element={<UpdatePage />}/>
                   <Route path="/search" element={<SearchPage />}/>
+                  <Route path="*" element={<NotFound />} />
               </Routes>
           </BrowserRouter>
       </>

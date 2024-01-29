@@ -62,16 +62,31 @@ const CreatePage = () => {
                     />
                 </div>
                 <div className="flex flex-col w-[800px] mt-6">
-                    <label htmlFor="language" className="mb-2 font-bold text-gray-900 dark:text-white text-center">Tag</label>
-                    <input type="text" id="language" name="language"
-                           className="bg-[#2C2C2C]  text-gray-400 rounded-lg block w-full p-2.5 "
-                           required
-                           value={language}
-                           onChange={(e) => setLanguage(e.target.value)}
-                    />
+                    <label htmlFor="language"
+                           className="mb-2 font-bold text-gray-900 dark:text-white text-center">Tag</label>
+                    <select name="language" id="language"  className="bg-[#2C2C2C] text-gray-400 rounded-lg block w-full p-2.5"
+                            required
+                            value={language}
+                            onChange={(e) => setLanguage(e.target.value)}>
+                        <option value="">-- Please choose an language --</option>
+                        <option value="Wp Bakery">Wp Bakery</option>
+                        <option value="WordPress">WordPress</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="SQL">SQL</option>
+                        <option value="PHP">PHP</option>
+                        <option value="CSS">CSS</option>
+                        <option value="HTML">HTML</option>
+                    </select>
+                    {/*<input type="text" id="language" name="language"*/}
+                    {/*       className="bg-[#2C2C2C]  text-gray-400 rounded-lg block w-full p-2.5 "*/}
+                    {/*       required*/}
+                    {/*       value={language}*/}
+                    {/*       onChange={(e) => setLanguage(e.target.value)}*/}
+                    {/*/>*/}
                 </div>
                 <div className="flex flex-col w-[800px] mt-6">
-                    <label htmlFor="codeSnippet" className="mb-4 font-bold text-gray-900 dark:text-white text-center">Code Snippet</label>
+                    <label htmlFor="codeSnippet" className="mb-4 font-bold text-gray-900 dark:text-white text-center">Code
+                        Snippet</label>
                     <textarea id="codeSnippet" name="codeSnippet" rows="15" cols="33"
                               className="bg-[#2C2C2C]  text-gray-400 rounded-lg block w-full p-2.5 "
                               required
